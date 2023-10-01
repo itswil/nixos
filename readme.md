@@ -43,3 +43,7 @@ sudo nixos-rebuild switch -I nixos-config=configuration.nix
 ### Default (after GUI installation with GNOME)
 
 [c84ef93](https://github.com/itswil/nixos-config/commit/c84ef9362e78effe6c7a0c8a200a05ed92e40d65)
+
+## 🔑 Modifications
+
+Changes from the default `configuration.nix` have been marked with `##`
