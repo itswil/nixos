@@ -2,10 +2,17 @@
 
 ## 👷🏻‍♂️ Setup
 
-From `~` (`/home/USERNAME`), temporarily install GIT and clone this repo:
+### Temporarily install GIT
 
 ```
 nix-shell -p git
+```
+
+### Clone config repo
+
+From `~` (which is the same as `/home/USERNAME`):
+
+```
 git clone https://github.com/itswil/nixos.git
 cd nixos
 ```
