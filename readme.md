@@ -1,21 +1,16 @@
-# NixOS Config
+# ❄️ NixOS Config
 
-## Setup
+## 👷🏻‍♂️ Setup
 
-From `~` or `/home/USERNAME`:
+From `~` (`/home/USERNAME`), temporarily install GIT and clone this repo:
 
 ```
-mkdir nixos
+nix-shell -p git
+git clone https://github.com/itswil/nixos.git
 cd nixos
 ```
 
-The default `configuration.nix` is in `/etc/nixos`, but we will create our own directory of configs in `/home/USERNAME/nixos`
-
-### Save the config
-
-```
-curl -O https://raw.githubusercontent.com/itswil/nixos-config/main/configuration.nix
-```
+The default `configuration.nix` is in `/etc/nixos`, but we will use this newly downloaded config
 
 ### Create a symlink for `hardware-configuration.nix`
 
@@ -31,8 +26,8 @@ This is necessary because the Rebuild step (next step) requires a `hardware-conf
 sudo nixos-rebuild switch -I nixos-config=configuration.nix
 ```
 
-## Config States
+## 🎄 Config States
 
 ### Default (after GUI installation with GNOME)
 
-https://github.com/itswil/nixos-config/commit/c84ef9362e78effe6c7a0c8a200a05ed92e40d65
+[c84ef93](https://github.com/itswil/nixos-config/commit/c84ef9362e78effe6c7a0c8a200a05ed92e40d65)
