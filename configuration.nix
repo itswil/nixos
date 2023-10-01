@@ -83,9 +83,44 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    chromium
+    git
     vscode
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+  ];
+
+  ## Remove default GNOME apps - comment out apps you want to keep
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    # cheese      # photo booth
+    # eog         # image viewer
+    epiphany    # web browser
+    # evince      # document viewer
+    # file-roller # archive manager
+    geary       # email client
+    gedit       # text editor
+    seahorse    # password manager
+    # simple-scan # document scanner
+    # totem       # video player
+    yelp        # help viewer
+  
+    gnome-calculator
+    gnome-calendar
+    gnome-characters
+    gnome-clocks
+    gnome-contacts
+    # gnome-disk-utility
+    # gnome-font-viewer
+    # gnome-logs
+    gnome-maps
+    gnome-music
+    # gnome-screenshot
+    # gnome-system-monitor
+    gnome-weather
+    pkgs.gnome-connections
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
