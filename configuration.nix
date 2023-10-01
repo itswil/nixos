@@ -92,6 +92,7 @@
 
   ## Remove default GNOME apps - comment out apps you want to keep
   environment.gnome.excludePackages = (with pkgs; [
+    gnome-connections
     gnome-photos
     gnome-tour
   ]) ++ (with pkgs.gnome; [
@@ -120,8 +121,7 @@
     # gnome-screenshot
     # gnome-system-monitor
     gnome-weather
-    pkgs.gnome-connections
-  ];
+  ]);
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
