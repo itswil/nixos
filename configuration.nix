@@ -80,8 +80,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  ## Remove XTerm
+  services.xserver.excludePackages = [ pkgs.xterm ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  ## Add packages
   environment.systemPackages = with pkgs; [
     chromium
     git
