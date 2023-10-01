@@ -94,6 +94,7 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-connections
     gnome-photos
+    gnome-text-editor
     gnome-tour
   ]) ++ (with pkgs.gnome; [
     # cheese      # photo booth
@@ -102,7 +103,6 @@
     # evince      # document viewer
     # file-roller # archive manager
     geary       # email client
-    gedit       # text editor
     seahorse    # password manager
     # simple-scan # document scanner
     # totem       # video player
