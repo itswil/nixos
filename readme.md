@@ -14,10 +14,15 @@ From `~` (which is the same as `/home/USERNAME`):
 
 ```
 git clone https://github.com/itswil/nixos.git
-cd nixos
 ```
 
-The default `configuration.nix` is in `/etc/nixos`, but we will use this newly downloaded config
+> Note: the default `configuration.nix` is located in `/etc/nixos`, but we will use this newly downloaded config
+
+### Change to this directory
+
+```
+cd nixos
+```
 
 ### Create a symlink for `hardware-configuration.nix`
 
@@ -25,7 +30,7 @@ The default `configuration.nix` is in `/etc/nixos`, but we will use this newly d
 ln -s /etc/nixos/hardware-configuration.nix .
 ```
 
-This is necessary because the Rebuild step (next step) requires a `hardware-configuration.nix` to be in the same location as `configuration.nix`
+> This is necessary because the Rebuild step (next step) requires a `hardware-configuration.nix` to be in the same location as `configuration.nix`
 
 ### Rebuild NixOS
 
